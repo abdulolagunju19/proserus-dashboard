@@ -5,11 +5,11 @@ import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 
-import Container from '@/components/Container';
+import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardDocuments = () => {
     return(
-        <Container>
+        <DashboardContainer>
             <Heading>Documents</Heading>
             <br/>
             <div>
@@ -18,7 +18,7 @@ const DashboardDocuments = () => {
             <Flex>
                 <Link href="https://storyset.com/data">Data Illustrations by Storyset</Link>
             </Flex>
-        </Container>
+        </DashboardContainer>
     )
 }
 

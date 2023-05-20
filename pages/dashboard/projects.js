@@ -9,7 +9,7 @@ import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { Flex, Box, Heading } from '@chakra-ui/react';
 
-import Container from '@/components/Container';
+import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardProjects = () => {
     const events1 = [
@@ -20,7 +20,7 @@ const DashboardProjects = () => {
     ];
 
     return(
-        <Container>
+        <DashboardContainer>
             <Heading mb={3}>Projects</Heading>
             <Flex flexDir="row">
                 <Card title="Prototype" style={{ width: '25rem', marginBottom: '2em' }}>
@@ -65,7 +65,7 @@ const DashboardProjects = () => {
                 
                 `}
             </style>
-        </Container>
+        </DashboardContainer>
     )
 }
 

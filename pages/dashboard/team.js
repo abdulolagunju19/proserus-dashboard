@@ -1,9 +1,9 @@
 import { Avatar, Flex, Heading, Text } from '@chakra-ui/react';
-import Container from '@/components/Container';
+import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardTeam = () => {
     return(
-        <Container>
+        <DashboardContainer>
             <Flex 
                 flexDir="column"
                 overflow="auto"
@@ -38,7 +38,7 @@ const DashboardTeam = () => {
                     </Flex>
                 </Flex>
             </Flex>
-        </Container>
+        </DashboardContainer>
     )
 }
 

@@ -1,12 +1,12 @@
 import clientPromise from "@/util/mongodb";
 import { Heading, Text, Box } from '@chakra-ui/react';
 
-import Container from "@/components/Container";
+import DashboardContainer from "@/components/DashboardContainer";
 
 export default function Movies({ movies }) {
   console.log(movies)
     return (
-      <Container>
+      <DashboardContainer>
         <Heading pb={2}>Top {movies.length} Movies of All Time</Heading>
         <div>
           {movies.map((movie) => (
@@ -18,7 +18,7 @@ export default function Movies({ movies }) {
             </Box>
           ))}
         </div>
-      </Container>
+      </DashboardContainer>
     );
   }
   export async function getServerSideProps(req, res) {

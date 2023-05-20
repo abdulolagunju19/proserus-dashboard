@@ -4,7 +4,7 @@ import { Flex, Heading } from '@chakra-ui/react';
 import Calendar from 'react-calendar';
 import styled from 'styled-components';
 
-import Container from '@/components/Container';
+import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardCalendar = () => {
     const [value, onChange] = useState(false);
@@ -88,7 +88,7 @@ const DashboardCalendar = () => {
     `;
 
     return(
-        <Container>
+        <DashboardContainer>
             <Heading pb={5}>Calendar</Heading>
             <Flex justifyContent="center">
                 <CalendarContainer>
@@ -98,7 +98,7 @@ const DashboardCalendar = () => {
                 />
                 </CalendarContainer>
             </Flex>
-        </Container>
+        </DashboardContainer>
     )
 }
 

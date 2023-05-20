@@ -6,7 +6,7 @@ import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 import { Chart } from 'primereact/chart';
 
-import Container from '@/components/Container';
+import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardReports = () => {
     const chartData = {
@@ -139,7 +139,7 @@ const DashboardReports = () => {
         }
     };
     return(
-        <Container>
+        <DashboardContainer>
             <Flex
                     flexDir="column"
                     overflow="auto"
@@ -156,7 +156,7 @@ const DashboardReports = () => {
                     <Chart type="radar" data={chartData2} options={lightOptions2} style={{ position: 'relative', width: '40%' }}/>
                 </div>  
             </Flex>
-        </Container>
+        </DashboardContainer>
     )
 }
 

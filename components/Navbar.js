@@ -18,10 +18,11 @@ import {
 
   import NextLink from 'next/link';
   
-  const Links = ['Dashboard', 'Calendar', 'Documents', 'Movies', 'Projects', 'Reports', 'Team'];
+  const hrefpaths = ['/dashboard', '/dashboard/calendar', '/dashboard/documents', '/dashboard/movies', '/dashboard/projects', '/dashboard/reports', '/dashboard/team'];
+  const Links = ['Dashboard', 'Calendar', 'Documents', 'Movies', 'Projects', 'Reports', 'Team']
                   
-  const NavLink = ({ children }) => (
-    <NextLink href="/dashboard/" passHref
+  const NavLink = ({ children, hrefpath }) => (
+    <NextLink href={hrefpath} passHref
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
@@ -49,13 +50,17 @@ import {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={'center'}>
-              <Box>Dashboard</Box>
+                <NextLink href="/" passHref>
+                  <Button variant="ghost" p={2} fontWeight="bold">
+                    Home
+                  </Button>
+                </NextLink>
               <HStack
                 as={'nav'}
                 spacing={4}
                 display={{ base: 'none', md: 'flex' }}>
-                {Links.map((link) => (
-                  <NavLink key={link}>{link}</NavLink>
+                {Links.map((link, index) => (
+                  <NavLink key={link} hrefpath={hrefpaths[index]}>{link}</NavLink>
                 ))}
               </HStack>
             </HStack>
@@ -87,8 +92,8 @@ import {
           {isOpen ? (
             <Box pb={4} display={{ md: 'none' }}>
               <Stack as={'nav'} spacing={4}>
-                {Links.map((link) => (
-                  <NavLink key={link}>{link}</NavLink>
+                {Links.map((link, index) => (
+                  <NavLink key={link} hrefpath={hrefpaths[index]}>{link}</NavLink>
                 ))}
               </Stack>
             </Box>
