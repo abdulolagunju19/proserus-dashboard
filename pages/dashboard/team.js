@@ -37,6 +37,10 @@ const DashboardTeam = () => {
                         <Text as='cite' fontSize='lg'>Kent Dodds</Text>
                     </Flex>
                 </Flex>
+                <Heading pb={3}>Work with Us!</Heading>
+                <Flex>
+                <iframe src="https://kuula.co/share/NBdQG?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1" width="100%" height="380" ></iframe>
+                </Flex>
             </Flex>
         </DashboardContainer>
     )

@@ -14,7 +14,7 @@ const DashboardCalendar = () => {
 
     const CalendarContainer = styled.div`
     /* ~~~ container styles ~~~ */
-    min-width: 800px;
+    min-width: 100%;
     margin: auto;
     margin-top: 20px;
     background-color: #FFFFFF;

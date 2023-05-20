@@ -9,7 +9,6 @@ const DashboardIndex = () => {
         <DashboardContainer>
             <Flex
                 flexDir="column"
-                overflow="auto"
                 maxH="100vh"
                 maxW="150vh"
             >

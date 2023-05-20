@@ -147,14 +147,7 @@ const DashboardReports = () => {
                     maxW="250vh"
             >
                 <Heading>Reports</Heading>
-                <div className="card">
-                    <Chart type="bar" data={chartData} options={lightOptions} height="70vh" width="100%"/>
-                </div>
-                <br/>
-                <Heading>Statistics</Heading>
-                <div className="card flex justify-content-center">
-                    <Chart type="radar" data={chartData2} options={lightOptions2} style={{ position: 'relative', width: '40%' }}/>
-                </div>  
+                <Chart type="bar" data={chartData} options={lightOptions} height="100vh" width="100%"/>
             </Flex>
         </DashboardContainer>
     )

@@ -6,7 +6,6 @@ import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 import { Timeline } from 'primereact/timeline';
 import { Card } from 'primereact/card';
-import { Button } from 'primereact/button';
 import { Flex, Box, Heading } from '@chakra-ui/react';
 
 import DashboardContainer from '@/components/DashboardContainer';
@@ -24,10 +23,10 @@ const DashboardProjects = () => {
             <Heading mb={3}>Projects</Heading>
             <Flex flexDir="row">
                 <Card title="Prototype" style={{ width: '25rem', marginBottom: '2em' }}>
-                    <p className="m-0" style={{lineHeight: '1.5'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                    <p style={{lineHeight: '1.5'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
                         quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
                 </Card>
-                <Box className="card" ml={10}>
+                <Box className="card">
                     <Timeline value={events1} opposite={(item) => item.status} content={(item) => <small className="p-text-secondary">{item.date}</small>} />
                 </Box>
             </Flex>
