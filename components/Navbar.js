@@ -18,8 +18,8 @@ import {
 
   import NextLink from 'next/link';
   
-  const hrefpaths = ['/', '/dashboard', '/dashboard/calendar', '/dashboard/documents', '/dashboard/movies', '/dashboard/projects', '/dashboard/reports', '/dashboard/team'];
-  const Links = ['Home', 'Dashboard', 'Calendar', 'Documents', 'Movies', 'Projects', 'Reports', 'Team']
+  const hrefpaths = ['/', '/dashboard', '/dashboard/calendar', '/dashboard/documents', '/dashboard/analytics', '/dashboard/projects', '/dashboard/reports', '/dashboard/team'];
+  const Links = ['Home', 'Dashboard', 'Calendar', 'Documents', 'Analytics', 'Projects', 'Reports', 'Team']
                   
   const NavLink = ({ children, hrefpath }) => (
     <NextLink href={hrefpath} passHref
