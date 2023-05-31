@@ -10,8 +10,8 @@ const DashboardIndex = ( { data } ) => {
         <DashboardContainer>
             <Heading pb={2}>Financial Report</Heading>
             <div>
-                {data.map((datum) => (
-                <Box p={5} m={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                {data.map((datum, index) => (
+                <Box key={index} p={5} m={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
                     <Heading pb={2}>{datum.symbol}</Heading>
                     <Heading size="h3">Calendar Year: {datum.calendarYear}</Heading>
                     <Text>Revenue: ${datum.revenue}</Text>

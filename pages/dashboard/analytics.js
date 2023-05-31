@@ -9,8 +9,8 @@ export default function Analytics({ analytics }) {
       <DashboardContainer>
         <Heading pb={2}>Customer Accounts</Heading>
         <div>
-          {analytics.map((analytic) => (
-            <Box p={5} m={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
+          {analytics.map((analytic, index) => (
+            <Box key={index} p={5} m={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
               <Heading pb={2}>{analytic.name}</Heading>
               <Heading size="h3">Username: {analytic.username}</Heading>
               <Heading pb={2} size="h3">Email: {analytic.email}</Heading>
