@@ -15,7 +15,7 @@ const DashboardDocuments = () => {
             <Heading pb={2}>Documents</Heading>
             <VStack>
                 <Box>
-
+                <embed src="/FINAL-2021-VT_SmBusiness_v7.pdf" width="700" height="800"></embed> 
                 </Box>
             </VStack>
             <Flex pt={3} justifyContent="center">

@@ -17,7 +17,7 @@ export default function Home() {
           size="xl"
           fontWeight="bold"
         >
-          Dashboard
+          Wayfinders Dashboard
         </Heading>
         <Image
           src="/indexpic.png"

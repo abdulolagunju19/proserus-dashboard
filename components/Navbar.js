@@ -18,8 +18,8 @@ import {
 
   import NextLink from 'next/link';
   
-  const hrefpaths = ['/', '/dashboard', '/dashboard/calendar', '/dashboard/documents', '/dashboard/analytics', '/dashboard/projects', '/dashboard/reports', '/dashboard/team'];
-  const Links = ['Home', 'Dashboard', 'Calendar', 'Documents', 'Analytics', 'Projects', 'Reports', 'Team']
+  const hrefpaths = ['/dashboard', '/dashboard/calendar', '/dashboard/documents', '/dashboard/analytics', '/dashboard/projects', '/dashboard/reports', '/dashboard/team'];
+  const Links = ['Dashboard', 'Calendar', 'Documents', 'Analytics', 'Projects', 'Reports', 'Team']
                   
   const NavLink = ({ children, hrefpath }) => (
     <NextLink href={hrefpath} passHref
@@ -52,7 +52,7 @@ import {
             <HStack spacing={8} alignItems={'center'}>
                 <NextLink href="/" passHref>
                   <Button variant="ghost" p={2} fontWeight="bold">
-                    DashSolutions
+                    Home
                   </Button>
                 </NextLink>
               <HStack

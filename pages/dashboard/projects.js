@@ -23,8 +23,7 @@ const DashboardProjects = () => {
             <Heading mb={3}>Projects</Heading>
             <Flex flexDir="row">
                 <Card title="Prototype" style={{ width: '25rem', marginBottom: '2em' }}>
-                    <p style={{lineHeight: '1.5'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+                    <p style={{lineHeight: '1.5'}}>Our services are designed to support you in your local economy. Whether you are a retailer, service provider, a freelancer, gig-worker, artisan, small manufacturer, technopreneur, seniorpreneur or new Canadian entrepreneur we are here to serve.</p>
                 </Card>
                 <Box className="card">
                     <Timeline value={events1} opposite={(item) => item.status} content={(item) => <small className="p-text-secondary">{item.date}</small>} />
