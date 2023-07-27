@@ -22,7 +22,7 @@ export default function Analytics({ analytics }) {
     );
   }
   export async function getServerSideProps(req, res) {
-    const client = await clientPromise
+    const client = await clientPromise;
     const database = client.db('sample_analytics');
     const analytics = await database
       .collection("customers")
@@ -32,7 +32,7 @@ export default function Analytics({ analytics }) {
       .toArray();
     return {
       props: {
-        analytics: JSON.parse(JSON.stringify(analytics)),
-      },
+        analytics: JSON.parse(JSON.stringify(analytics))
+      }
     };
   }
