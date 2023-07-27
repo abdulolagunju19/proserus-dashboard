@@ -1,10 +1,9 @@
-import clientPromise from "@/util/mongodb";
+import { dbConnect } from '@/utils/mongodb';
 import { Heading, Text, Box } from '@chakra-ui/react';
 
 import DashboardContainer from "@/components/DashboardContainer";
 
 export default function Analytics({ analytics }) {
-  // console.log(analytics)
     return (
       <DashboardContainer>
         <Heading pb={2}>Customer Accounts</Heading>
@@ -22,7 +21,7 @@ export default function Analytics({ analytics }) {
     );
   }
   export async function getServerSideProps(req, res) {
-    const client = await clientPromise;
+    const client = await dbConnect();
     const database = client.db('sample_analytics');
     const analytics = await database
       .collection("customers")

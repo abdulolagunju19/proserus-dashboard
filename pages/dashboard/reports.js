@@ -1,8 +1,6 @@
 import { Flex, Heading, Box, Text } from '@chakra-ui/react';
 
 import DashboardContainer from '@/components/DashboardContainer';
-import Simple from '@/components/Navbar';
-import NextLink from 'next/link'
 
 const DashboardReports = ( { data } ) => {
     console.log(data)
