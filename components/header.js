@@ -1,5 +1,7 @@
 import NextLink from 'next/link';
 import { useColorModeValue, Button, Flex } from '@chakra-ui/react';
+import { signIn } from 'next-auth/react'
+
 import ThemeToggle from './theme-toggle';
 
 export default function Header() {
@@ -27,11 +29,16 @@ export default function Header() {
                     Home
                   </Button>
                 </NextLink>
-                <NextLink href="/dashboard" passHref>
-                  <Button variant="ghost" p={2} fontWeight="bold">
-                    Dashboard
-                  </Button>
-                </NextLink>
+                <Button 
+                  variant="ghost" 
+                  p={2} 
+                  fontWeight="bold" 
+                  onClick={() => {
+                    signIn('google', { callbackUrl: "http://localhost:3000/dashboard"})
+                  }}
+                >
+                  Sign In
+                </Button>
             </Flex>
             <Flex>
               <ThemeToggle />

@@ -19,6 +19,7 @@
     "framer-motion": "^10.12.12",
     "mongodb": "^5.5.0",
     "next": "13.4.2",
+    "next-auth": "^4.22.3",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primereact": "^9.4.0",

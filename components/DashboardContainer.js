@@ -2,15 +2,15 @@ import Header from './header';
 import Footer from './footer';
 import { useColorModeValue, Flex } from '@chakra-ui/react';
 
-import Simple from './Navbar';
+import DashboardNav from './DashboardNav';
 
-export default function Container({ children }) {
+export default function DashboardContainer({ children }) {
   const bgColor = useColorModeValue('white', 'gray.900');
   const primarytextColor = useColorModeValue('black', 'white');
 
   return (
     <>
-      <Simple />
+      <DashboardNav />
       <Flex
         as="main"
         w="full"
