@@ -6,7 +6,7 @@ export const TWITTER_USER_NAME = 'abdulolagunju19';
 export const PLATFORM_URL = 'https://abneuro.vercel.app';
 
 export const links = [
-  [Twitter, 'https://mobile.twitter.com/ponteminnovate', 'Twitter'],
+  [Twitter, 'https://mobile.twitter.com/', 'Twitter'],
   [Github, 'https://github.com/abdulolagunju19', 'Github'],
   [Mail, 'mailto:abdulolagunju19@gmail.com', 'Email']
 ];
