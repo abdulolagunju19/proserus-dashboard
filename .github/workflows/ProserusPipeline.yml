@@ -11,13 +11,18 @@ jobs:
     steps:
       - name: Clone Repository
         uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.16.0'
+          cache: 'yarn'
       - name: Install Dependencies
         run: |
           echo "Running installing dependencies..."
-          npm install
+          yarn install
       - name: Run Tests
         run: |
           echo "Running tests..."
-          npm run test
+          yarn test
         env: 
           CI: true

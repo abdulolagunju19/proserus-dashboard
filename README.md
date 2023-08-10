@@ -1,4 +1,4 @@
-# Welcome to my Portfolio!
+# Welcome to my Dashboard!
 
 ## 💡 Motivation 
 
