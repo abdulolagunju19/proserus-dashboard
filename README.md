@@ -9,19 +9,19 @@ Feel free to [reach out](https://abneuro.vercel.app/contact) to me if you have a
 ## ✨ Pages 
 
 1. **Home Page**: <br/>
-<img width="60%" src="./public/home_page.png" alt="homepage" /> 
+<img width="100%" src="./public/home_page.png" alt="homepage" /> 
 
 2. **Analytics Page**: <br/>
-<img width="60%" src="./public/analytics_page.png" alt="analyticspage" /> 
+<img width="100%" src="./public/analytics_page.png" alt="analyticspage" /> 
 
 3. **Dashboard Page**: <br/>
-<img width="60%" src="./public/dashboard_page.png" alt="dashboardpage" /> 
+<img width="100%" src="./public/dashboard_page.png" alt="dashboardpage" /> 
 
 4. **Projects Page**: <br/>
-<img width="60%" src="./public/projects_page.png" alt="projectspage" /> 
+<img width="100%" src="./public/projects_page.png" alt="projectspage" /> 
 
 5. **Team Page**: <br/>
-<img width="60%" src="./public/team_page.png" alt="teampage" /> 
+<img width="100%" src="./public/team_page.png" alt="teampage" /> 
 
 ## ⚡️ Technologies 
 
@@ -41,7 +41,7 @@ MongoDB has a free tier, in addition to being flexible and fast. I didn't want t
 
 **Here is a simple diagram showing how databases can be connected to a Next.js web app:**
 
-<img width="60%" src="./public/db-nextjs.png" alt="architecture" /> 
+<img width="100%" src="./public/db-nextjs.png" alt="architecture" /> 
 
 ### API Routes
 - /api/auth to set up next-auth
