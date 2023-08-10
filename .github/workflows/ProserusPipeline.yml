@@ -1,0 +1,23 @@
+name: ProserusPipeline
+
+on: 
+  push:
+    branches: [main]
+
+jobs: 
+  proserusTest: 
+    name: Proserus
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: |
+          echo "Running installing dependencies..."
+          npm install
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+          npm run test
+        env: 
+          CI: true

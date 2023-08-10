@@ -6,6 +6,7 @@ export default function Container({ children }) {
   const bgColor = useColorModeValue('white', 'gray.900');
   const primarytextColor = useColorModeValue('black', 'white');
 
+  //container for home page
   return (
     <>
       <Header />
