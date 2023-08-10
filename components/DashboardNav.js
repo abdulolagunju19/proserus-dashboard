@@ -36,8 +36,11 @@ import {
   );
   
   export default function DashboardNav() {
+    //for user profile on navigation to sign out
     const { isOpen, onOpen, onClose } = useDisclosure();
   
+    //different navigation bar compared to home page, use .map to display buttons in header
+    //when sign out clicked, callback to take user back to home page
     return (
       <>
         <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>

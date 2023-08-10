@@ -7,6 +7,8 @@ import ThemeToggle from './theme-toggle';
 export default function Header() {
   const bgColor = useColorModeValue('white', 'gray.900');
 
+  //header is on home page with login button
+  //google authentication for user sign in with next-auth
   return (
     <Flex
       pos="fixed"

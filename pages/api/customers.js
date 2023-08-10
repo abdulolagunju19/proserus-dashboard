@@ -1,6 +1,7 @@
 import { ObjectId } from 'mongodb';
 import { dbConnect } from '@/utils/mongodb';
 
+//handler for api endpoints
 export default async function handler(req, res) {
   switch (req.method){
     case 'GET':

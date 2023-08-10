@@ -2,7 +2,7 @@ import { Flex, Heading, Box, Text } from '@chakra-ui/react';
 
 import DashboardContainer from '@/components/DashboardContainer';
 
-const DashboardReports = ( { data } ) => {
+const DashboardReports = ({ data }) => {
     console.log(data)
     return(
         <DashboardContainer>
@@ -21,23 +21,28 @@ const DashboardReports = ( { data } ) => {
     )
 }
 
+//fetch data from financial modeling prep api, if there is no data, return to home page
 export async function getServerSideProps(){
-    const res = await fetch(`https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=${process.env.FINANCIAL_MODELING_PREP_KEY}`);
-    const data = await res.json();
+    try {
+        const res = await fetch(`https://financialmodelingprep.com/api/v3/income-statement/AAPL?limit=120&apikey=${process.env.FINANCIAL_MODELING_PREP_KEY}`);
+        const data = await res.json();
 
-    if (!data) {
-        return {
-          redirect: {
-            destination: '/',
-            permanent: false,
-          },
+        if (!data) {
+            return {
+            redirect: {
+                destination: '/',
+                permanent: false,
+            },
+            }
         }
-    }
 
-    return{
-        props:{
-            data
+        return{
+            props:{
+                data
+            }
         }
+    } catch (error) {
+        console.error('There is an error connecting the financial model api: ', error)
     }
 }
 

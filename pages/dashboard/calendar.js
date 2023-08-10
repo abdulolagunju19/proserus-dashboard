@@ -8,6 +8,7 @@ import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardCalendar = () => {
     const [value, onChange] = useState(false);
+    
     useEffect(() => {
         onChange(new Date());
     }, []);
