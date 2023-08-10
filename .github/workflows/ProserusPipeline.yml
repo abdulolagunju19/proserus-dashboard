@@ -15,10 +15,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.16.0'
+      - name: Install Dependencies
+        run: |
+          echo "Running installing dependencies..."
+          yarn install
       - name: Run Tests
         run: |
           echo "Running tests..."
-          yarn install
           yarn test
         env: 
           CI: true
