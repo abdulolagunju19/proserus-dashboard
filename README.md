@@ -51,10 +51,13 @@ MongoDB has a free tier, in addition to being flexible and fast. I didn't want t
 - mongodb
 - chart.js
 - styled-components
+
+### New Improvements
+1. Wrap app with session tokens. Now the api routes and dashboard are protected!
+
 ## Future Improvements
 1. Use api endpoints in client side components.
 2. Develop MongoDB schema.
-3. Wrap app with session tokens.
 
 ## 👏 Contribute 
 
