@@ -1,23 +1,39 @@
-import { Flex, Heading, Box, Text } from '@chakra-ui/react';
+import { Heading, Box, Text } from '@chakra-ui/react';
+
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardReports = ({ data }) => {
-    console.log(data)
+
+    const router = useRouter();
+
+    const { data: session } = useSession({
+        required: true,
+        onUnauthenticated() {
+          router.push('/')
+        }
+    });
+    
     return(
-        <DashboardContainer>
-            <Heading pb={2}>Financial Report</Heading>
-            <div>
-                {data.map((datum, index) => (
-                <Box key={index} p={5} m={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                    <Heading pb={2}>{datum.symbol}</Heading>
-                    <Heading size="h3">Calendar Year: {datum.calendarYear}</Heading>
-                    <Text>Revenue: ${datum.revenue}</Text>
-                    <Text>Operating Expenses: ${datum.operatingExpenses}</Text>
-                </Box>
-                ))}
-            </div>
-        </DashboardContainer>
+        <>
+            {session &&
+                <DashboardContainer>
+                    <Heading pb={2}>Financial Report</Heading>
+                    <div>
+                        {data.map((datum, index) => (
+                        <Box key={index} p={5} m={3} borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                            <Heading pb={2}>{datum.symbol}</Heading>
+                            <Heading size="h3">Calendar Year: {datum.calendarYear}</Heading>
+                            <Text>Revenue: ${datum.revenue}</Text>
+                            <Text>Operating Expenses: ${datum.operatingExpenses}</Text>
+                        </Box>
+                        ))}
+                    </div>
+                </DashboardContainer>
+            }
+        </>
     )
 }
 

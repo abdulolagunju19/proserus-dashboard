@@ -1,8 +1,17 @@
 import { ObjectId } from 'mongodb';
 import { dbConnect } from '@/utils/mongodb';
 
+import { getServerSession } from 'next-auth/next';
+import { authOptions } from './auth/[...nextauth]';
+
 //handler for api endpoints
 export default async function handler(req, res) {
+  const session = await getServerSession(req, res, authOptions);
+
+  if (!session) {
+    return res.json({ message: 'You are not logged in.' })
+  }
+
   switch (req.method){
     case 'GET':
       try{

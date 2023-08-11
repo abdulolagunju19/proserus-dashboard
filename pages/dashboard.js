@@ -1,5 +1,8 @@
 import { Flex, Heading } from '@chakra-ui/react';
 
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
+
 import 'primeicons/primeicons.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import 'primereact/resources/primereact.css';
@@ -9,6 +12,16 @@ import { Chart } from 'primereact/chart';
 import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardIndex = () => {
+
+    const router = useRouter();
+
+    const { data: session } = useSession({
+        required: true,
+        onUnauthenticated() {
+          router.push('/')
+        }
+    });
+
     const chartData = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
@@ -89,17 +102,21 @@ const DashboardIndex = () => {
     };
 
     return(
-        <DashboardContainer>
-            <Flex
-                flexDir="column"
-                overflow="auto"
-                maxH="80vh"
-                maxW="250vh"
-            >
-                <Heading>Financial Overview</Heading>
-                <Chart type="bar" data={chartData} options={lightOptions} height="100vh" width="100%"/>
-            </Flex>
-        </DashboardContainer>
+        <>
+            {session && 
+                <DashboardContainer>
+                    <Flex
+                        flexDir="column"
+                        overflow="auto"
+                        maxH="80vh"
+                        maxW="250vh"
+                    >
+                        <Heading>Financial Overview</Heading>
+                        <Chart type="bar" data={chartData} options={lightOptions} height="100vh" width="100%"/>
+                    </Flex>
+                </DashboardContainer>
+            }
+        </>
     )
 }
 

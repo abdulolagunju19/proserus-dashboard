@@ -82,7 +82,7 @@ import {
                 </MenuButton>
                 <MenuList>
                   <MenuItem onClick={() => {
-                    signOut({ callbackUrl: "https://proserus.vercel.app/" })
+                    signOut({ callbackUrl: "/" })
                   }}>
                     Sign Out
                   </MenuItem>

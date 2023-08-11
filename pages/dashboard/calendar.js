@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
 import { Flex, Heading } from '@chakra-ui/react';
+
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
+
 import Calendar from 'react-calendar';
 import styled from 'styled-components';
 
 import DashboardContainer from '@/components/DashboardContainer';
 
 const DashboardCalendar = () => {
+
+    const router = useRouter();
+
+    const { data: session } = useSession({
+        required: true,
+        onUnauthenticated() {
+          router.push('/')
+        }
+    });
+
     const [value, onChange] = useState(false);
     
     useEffect(() => {
@@ -89,17 +103,21 @@ const DashboardCalendar = () => {
     `;
 
     return(
-        <DashboardContainer>
-            <Heading pb={5}>Calendar</Heading>
-            <Flex justifyContent="center">
-                <CalendarContainer>
-                <Calendar
-                    onChange={onChange}
-                    value={value}
-                />
-                </CalendarContainer>
-            </Flex>
-        </DashboardContainer>
+        <>
+            {session &&
+                <DashboardContainer>
+                    <Heading pb={5}>Calendar</Heading>
+                    <Flex justifyContent="center">
+                        <CalendarContainer>
+                        <Calendar
+                            onChange={onChange}
+                            value={value}
+                        />
+                        </CalendarContainer>
+                    </Flex>
+                </DashboardContainer>
+            }
+        </>
     )
 }
 

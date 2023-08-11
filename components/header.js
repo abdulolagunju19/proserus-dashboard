@@ -36,7 +36,7 @@ export default function Header() {
                   p={2} 
                   fontWeight="bold" 
                   onClick={() => {
-                    signIn('google', { callbackUrl: "https://proserus.vercel.app/dashboard"})
+                    signIn('google', { callbackUrl: "/dashboard"})
                   }}
                 >
                   Sign In
