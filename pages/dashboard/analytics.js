@@ -10,7 +10,7 @@ export default function Analytics({ analytics }) {
 
   const router = useRouter();
 
-    const { data: session } = useSession({
+  const { data: session } = useSession({
         required: true,
         onUnauthenticated() {
           router.push('/')
