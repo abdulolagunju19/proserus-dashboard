@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import { SessionProvider } from 'next-auth/react';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps: { session, ...pageProps} }) {
 
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps} }) {
     <SessionProvider session={session}>
       <ChakraProvider>
         <Component {...pageProps} />
+        <Analytics />
       </ChakraProvider>
     </SessionProvider>
   )
