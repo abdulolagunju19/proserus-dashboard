@@ -54,10 +54,11 @@ MongoDB has a free tier, in addition to being flexible and fast. I didn't want t
 
 ### New Improvements
 1. Wrap app with session tokens. Now the api routes and dashboard are protected!
+2. Use api endpoints in client side components. I now fetch the data in the analytics page not with getServerSideProps, which was slow, but directly with a GET request from my API!
+3. Removed package-lock.json now that I am using yarn to avoid future confusion and possible consistency issues.
 
 ## Future Improvements
-1. Use api endpoints in client side components.
-2. Develop MongoDB schema.
+1. Develop MongoDB or mongoose schema.
 
 ## 👏 Contribute 
 
