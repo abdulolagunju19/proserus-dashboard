@@ -29,7 +29,8 @@
     "react-calendar": "^4.2.1",
     "react-dom": "18.2.0",
     "react-pdfobject": "^1.2.0",
-    "styled-components": "^6.0.0-rc.1"
+    "styled-components": "^6.0.0-rc.1",
+    "swr": "^2.2.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
